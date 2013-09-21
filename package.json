@@ -1,0 +1,32 @@
+{
+  "name":        "saucier",
+  "description": "A command line tool for working with Sauce Labs.",
+  "version":     "0.0.1",
+  "bin":         "bin/cli.js",
+
+  "author": "Daniel Perez Alvarez <unindented@gmail.com> (https://github.com/unindented)",
+
+  "engines": {
+    "node": ">= 0.6"
+  },
+
+  "dependencies": {
+    "commander":  "~2.0.0",
+    "saucelabs":  "~0.1.0",
+    "lodash":     "~2.0.0",
+    "wd":         "~0.1.4",
+    "winston":    "~0.7.2"
+  },
+  "devDependencies" : {
+    "jshint":              "2.1.x",
+    "mocha":               "1.13.x",
+    "sinon":               "1.7.x",
+    "chai":                "1.8.x",
+    "sinon-chai":          "2.4.x",
+    "sandboxed-module":    "0.2.x"
+  },
+
+  "scripts": {
+    "test": "make lint test"
+  }
+}

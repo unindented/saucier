@@ -1,0 +1,5 @@
+/node_modules/
+/tmp/
+
+/coverage.html
+/sauce_connect.log
