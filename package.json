@@ -1,7 +1,7 @@
 {
   "name":        "saucier",
   "description": "A command line tool for working with Sauce Labs.",
-  "version":     "0.0.1",
+  "version":     "0.1.0",
   "bin":         "bin/cli.js",
 
   "author": "Daniel Perez Alvarez <unindented@gmail.com> (https://github.com/unindented)",
