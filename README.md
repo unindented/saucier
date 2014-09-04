@@ -1,4 +1,4 @@
-# Saucier [![Build Status](https://travis-ci.org/unindented/saucier.png)](https://travis-ci.org/unindented/saucier)
+# Saucier [![Build Status](https://travis-ci.org/unindented/saucier.png)](https://travis-ci.org/unindented/saucier) [![Dependency Status](https://gemnasium.com/unindented/saucier.png)](https://gemnasium.com/unindented/saucier)
 
 A command line tool for working with [Sauce Labs](http://saucelabs.com).
 
