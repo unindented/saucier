@@ -18,6 +18,7 @@ SAUCE_LOG  := $(ROOT_DIR)/sauce_connect.log
 NPM    := $(shell which npm)
 JSCOV  := $(shell which jscoverage)
 JSHINT := $(NPMBIN_DIR)/jshint
+JSCS   := $(NPMBIN_DIR)/jscs
 MOCHA  := $(NPMBIN_DIR)/mocha
 
 # Rules
@@ -32,6 +33,7 @@ clean:
 
 lint:
 	@$(JSHINT) $(BIN_DIR) $(SRC_DIR)
+	@$(JSCS) $(BIN_DIR) $(SRC_DIR)
 
 test:
 	@$(MOCHA)

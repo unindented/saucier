@@ -25,6 +25,7 @@
 
   "devDependencies" : {
     "jshint":           "~2.7.0",
+    "jscs":             "~1.13.1",
     "mocha":            "~2.2.5",
     "sinon":            "~1.14.1",
     "chai":             "~2.3.0",

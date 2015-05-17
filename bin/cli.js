@@ -16,9 +16,9 @@ var SauceDriver    = sl.SauceDriver;
 
 var PACKAGE_FILE = path.join(__dirname, '../package.json');
 
-var package = JSON.parse(fs.readFileSync(PACKAGE_FILE, 'utf8'));
-var name    = package.name;
-var version = package.version;
+var pkg      = JSON.parse(fs.readFileSync(PACKAGE_FILE, 'utf8'));
+var pname    = pkg.name;
+var pversion = pkg.version;
 
 var config;
 var action;
@@ -26,10 +26,10 @@ var args;
 
 // Program /////////////////////////////////////////////////////////////////////////////////////////
 
-cmd.name = name;
+cmd.name = pname;
 
 cmd
-  .version(version)
+  .version(pversion)
   .option('-u, --user <user>', 'username for Sauce Labs')
   .option('-k, --key <key>',   'access key for Sauce Labs')
   .option('-d, --debug',       'enable verbose debugging', false);
@@ -76,13 +76,13 @@ if (_.isEmpty(cmd.args)) {
 enableLogger(cmd.debug ? 'verbose' : 'error');
 
 // Read config parameters and run the specified action.
-config = new SauceConfig({ username: cmd.user, accessKey: cmd.key }).config();
+config = new SauceConfig({username: cmd.user, accessKey: cmd.key}).config();
 runAction();
 
 // Actions /////////////////////////////////////////////////////////////////////////////////////////
 
 function launchAction(browser, url) {
-  var cache = new SauceCache({ version: version });
+  var cache = new SauceCache({version: pversion});
   cache.load(
     function (callback) {
       var client = new SauceClient(config);
@@ -201,7 +201,8 @@ function exit() {
     _.verbose('Cleaning up');
     process.emit('cleanup');
     process.removeAllListeners('cleanup');
-  } else {
+  }
+  else {
     // The second time you press C-c, there will be no listeners and the program
     // will exit.
     _.verbose('Exiting');

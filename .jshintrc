@@ -1,64 +1,60 @@
 {
-  // == Enforcing Options =====================================================
+  "bitwise":       false,
+  "camelcase":     true,
+  "curly":         true,
+  "eqeqeq":        true,
+  "forin":         true,
+  "freeze":        true,
+  "funcscope":     true,
+  "futurehostile": true,
+  "globalstrict":  true,
+  "iterator":      true,
+  "latedef":       false,
+  "noarg":         true,
+  "nocomma":       true,
+  "nonbsp":        true,
+  "nonew":         true,
+  "notypeof":      true,
+  "shadow":        true,
+  "singleGroups":  false,
+  "undef":         true,
+  "unused":        true,
 
-  "bitwise"       : false
-, "camelcase"     : false
-, "curly"         : true
-, "eqeqeq"        : true
-, "forin"         : true
-, "immed"         : true
-, "latedef"       : false
-, "newcap"        : true
-, "noarg"         : true
-, "noempty"       : true
-, "nonew"         : true
-, "plusplus"      : false
-, "quotmark"      : true
-, "regexp"        : true
-, "undef"         : true
-, "unused"        : true
-, "strict"        : false
-, "trailing"      : true
+  "maxdepth":      4,
+  "maxparams":     5,
+  "maxcomplexity": 10,
+  "maxstatements": 0,
 
-, "indent"        : 2
-, "maxparams"     : 3
-, "maxdepth"      : 5
-, "maxstatements" : 20
-, "maxcomplexity" : 10
-, "maxlen"        : 100
+  "asi":           false,
+  "boss":          false,
+  "debug":         false,
+  "elision":       false,
+  "eqnull":        true,
+  "esnext":        false,
+  "evil":          false,
+  "expr":          false,
+  "lastsemic":     false,
+  "loopfunc":      false,
+  "noyield":       false,
+  "plusplus":      false,
+  "proto":         false,
+  "scripturl":     false,
+  "strict":        false,
+  "sub":           true,
+  "supernew":      false,
+  "validthis":     false,
+  "withstmt":      false,
 
-  // == Relaxing Options ======================================================
+  "browser":       true,
+  "devel":         false,
+  "jasmine":       false,
+  "jquery":        false,
+  "mocha":         false,
+  "node":          true,
+  "phantom":       true,
+  "typed":         true,
+  "worker":        true,
 
-, "asi"           : false
-, "boss"          : false
-, "debug"         : false
-, "eqnull"        : true
-, "es5"           : false
-, "esnext"        : false
-, "evil"          : false
-, "expr"          : false
-, "funcscope"     : false
-, "globalstrict"  : false
-, "iterator"      : false
-, "lastsemic"     : false
-, "laxbreak"      : false
-, "laxcomma"      : false
-, "loopfunc"      : false
-, "multistr"      : false
-, "onecase"       : false
-, "proto"         : false
-, "regexdash"     : false
-, "scripturl"     : false
-, "smarttabs"     : false
-, "shadow"        : false
-, "sub"           : true
-, "supernew"      : false
-, "validthis"     : false
-
-  // == Environments ==========================================================
-
-, "browser"       : false
-, "devel"         : false
-, "node"          : true
-
+  "globals":       {
+  }
 }

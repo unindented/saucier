@@ -6,13 +6,14 @@ function FakeProc() {
     this.stdout = new events.EventEmitter();
     this.stdout = new events.EventEmitter();
     this.stderr = new events.EventEmitter();
-  } else {
+  }
+  else {
     return new FakeProc();
   }
 }
 
 inherits(FakeProc, events.EventEmitter);
 
-module.exports = function (chai, utils) {
+module.exports = function (chai) {
   chai.FakeProc = FakeProc;
 };
