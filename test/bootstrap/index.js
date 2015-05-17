@@ -14,5 +14,5 @@ global.chai.use(require('sinon-chai'));
 // Helpers
 global.chai.use(require('../helpers/'));
 
-// Sandboxed Module
-global.sandbox = require('sandboxed-module');
+// Rewire
+global.rewire = require('rewire');

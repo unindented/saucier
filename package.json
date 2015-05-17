@@ -12,23 +12,24 @@
   },
 
   "engines": {
-    "node": ">= 0.6"
+    "node": ">=0.10"
   },
 
   "dependencies": {
-    "commander":        "~2.0.0",
+    "commander":        "~2.8.1",
     "saucelabs":        "~0.1.1",
-    "lodash":           "~2.2.0",
-    "wd":               "~0.1.5",
-    "winston":          "~0.7.2"
+    "lodash":           "~3.8.0",
+    "wd":               "~0.3.11",
+    "winston":          "~1.0.0"
   },
+
   "devDependencies" : {
-    "jshint":           "2.1.x",
-    "mocha":            "1.13.x",
-    "sinon":            "1.7.x",
-    "chai":             "1.8.x",
-    "sinon-chai":       "2.4.x",
-    "sandboxed-module": "0.2.x"
+    "jshint":           "~2.7.0",
+    "mocha":            "~2.2.5",
+    "sinon":            "~1.14.1",
+    "chai":             "~2.3.0",
+    "sinon-chai":       "~2.7.0",
+    "rewire":           "~2.3.3"
   },
 
   "scripts": {

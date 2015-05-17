@@ -28,14 +28,13 @@ describe('SauceClient', function () {
       // Fake the saucelabs module...
       saucelabs = _.object([func], [sinon.spy()]);
       dependencies = {
-        saucelabs: sinon.spy(function () {
+        SauceLabs: sinon.spy(function () {
           return saucelabs;
         })
       };
       // ... and inject it into the context.
-      SauceClient = sandbox.require('../lib/saucier/sauce_client', {
-        requires: dependencies
-      });
+      SauceClient = rewire('../../lib/saucier/sauce_client');
+      SauceClient.__set__(dependencies);
     }
 
     describe('#browsers', function () {

@@ -29,14 +29,13 @@ describe('SauceCache', function () {
         }
       }, funcs);
       dependencies = {
-        './temp_file': function () {
+        TempFile: function () {
           return tfile;
         }
       };
       // ... and inject it into the context.
-      SauceCache = sandbox.require('../lib/saucier/sauce_cache', {
-        requires: dependencies
-      });
+      SauceCache = rewire('../../lib/saucier/sauce_cache');
+      SauceCache.__set__(dependencies);
     }
 
     describe('#load', function () {

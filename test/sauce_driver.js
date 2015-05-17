@@ -33,9 +33,8 @@ describe('SauceDriver', function () {
         }
       };
       // ... and inject it into the context.
-      SauceDriver = sandbox.require('../lib/saucier/sauce_driver', {
-        requires: dependencies
-      });
+      SauceDriver = rewire('../../lib/saucier/sauce_driver');
+      SauceDriver.__set__(dependencies);
     }
 
     describe('#constructor', function () {

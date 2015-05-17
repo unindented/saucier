@@ -42,9 +42,8 @@ describe('TempFile', function () {
         }, funcs)
       };
       // ... and inject it into the context.
-      TempFile = sandbox.require('../lib/saucier/temp_file', {
-        requires: dependencies
-      });
+      TempFile = rewire('../../lib/saucier/temp_file');
+      TempFile.__set__(dependencies);
     }
 
     describe('#realpath', function () {

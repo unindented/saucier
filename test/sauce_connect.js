@@ -31,16 +31,15 @@ describe('SauceConnect', function () {
       // Fake the child_process module...
       proc = chai.FakeProc();
       dependencies = {
-        child_process: {
+        childProc: {
           spawn: sinon.spy(function () {
             return proc;
           })
         }
       };
       // ... and inject it into the context.
-      SauceConnect = sandbox.require('../lib/saucier/sauce_connect', {
-        requires: dependencies
-      });
+      SauceConnect = rewire('../../lib/saucier/sauce_connect');
+      SauceConnect.__set__(dependencies);
     }
 
     describe('#version', function () {
@@ -51,7 +50,7 @@ describe('SauceConnect', function () {
 
       it('spawns `Sauce-Connect.jar` with `--version`', function () {
         connect.version(function () {});
-        dependencies.child_process.spawn.should.have.been.calledWithExactly(
+        dependencies.childProc.spawn.should.have.been.calledWithExactly(
           'java',
           ['-jar', JAR_FILE, '--version'],
           { detached: true }
@@ -92,7 +91,7 @@ describe('SauceConnect', function () {
 
       it('spawns `Sauce-Connect.jar` with the provided username and access key', function () {
         connect.tunnel();
-        dependencies.child_process.spawn.should.have.been.calledWithExactly(
+        dependencies.childProc.spawn.should.have.been.calledWithExactly(
           'java',
           ['-jar', JAR_FILE, SAUCE_USERNAME, SAUCE_ACCESS_KEY],
           { detached: true }
@@ -100,7 +99,7 @@ describe('SauceConnect', function () {
       });
       it('spawns `Sauce-Connect.jar` with `--debug` if passed the `debug` option', function () {
         connect.tunnel({ debug: true });
-        dependencies.child_process.spawn.should.have.been.calledWithExactly(
+        dependencies.childProc.spawn.should.have.been.calledWithExactly(
           'java',
           ['-jar', JAR_FILE, SAUCE_USERNAME, SAUCE_ACCESS_KEY, '--debug'],
           { detached: true }
@@ -108,7 +107,7 @@ describe('SauceConnect', function () {
       });
       it('spawns `Sauce-Connect.jar` with `--shared-tunnel` if passed the `shared` option', function () {
         connect.tunnel({ shared: true });
-        dependencies.child_process.spawn.should.have.been.calledWithExactly(
+        dependencies.childProc.spawn.should.have.been.calledWithExactly(
           'java',
           ['-jar', JAR_FILE, SAUCE_USERNAME, SAUCE_ACCESS_KEY, '--shared-tunnel'],
           { detached: true }

@@ -44,9 +44,8 @@ describe('SauceConfig', function () {
         }
       };
       // ... and inject it into the context.
-      SauceConfig = sandbox.require('../lib/saucier/sauce_config', {
-        requires: dependencies
-      });
+      SauceConfig = rewire('../../lib/saucier/sauce_config');
+      SauceConfig.__set__(dependencies);
     }
 
     describe('#config', function () {
