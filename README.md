@@ -1,4 +1,4 @@
-# Saucier [![Build Status](https://img.shields.io/travis/unindented/saucier.svg)](http://travis-ci.org/unindented/saucier) [![Dependency Status](https://img.shields.io/gemnasium/unindented/saucier.svg)](https://gemnasium.com/unindented/saucier)
+# Saucier [![Version](https://img.shields.io/npm/v/saucier.svg)](https://www.npmjs.com/package/saucier) [![Build Status](https://img.shields.io/travis/unindented/saucier.svg)](http://travis-ci.org/unindented/saucier) [![Dependency Status](https://img.shields.io/gemnasium/unindented/saucier.svg)](https://gemnasium.com/unindented/saucier)
 
 A command line tool for working with [Sauce Labs](http://saucelabs.com).
 
